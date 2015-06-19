@@ -1,0 +1,23 @@
+<div class="issue-list">
+	<% issues.each do |i| %>
+    	<article class="issue clearfix">
+      		<div class="avatar">
+       	 		<a href="/happypeter">
+          			<img src=http://gravatar.com/avatar/a92785d8d68f1d1d83b008574f8b5dba.png?s=512&amp;d=retro alt="">
+				</a>      
+			</div>
+     		 <div class="body">
+        		<h5 class="title">
+         		 <%= link_to i[:title],"#"	%>
+        		</h5>
+       			 <a class="read-more" href="#">read</a>
+        		<span class="meta-data">
+         		 <a href="/happypeter">happypeter</a>
+       			 </span>
+     		 </div>
+      		<div class="issue-comment-count">
+        		<%= link_to i[:comments],"#"	%>
+     		</div>
+    	</article>
+    <% end %>
+  </div>
