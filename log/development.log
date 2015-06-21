@@ -2572,3 +2572,1179 @@ Processing by IssuesController#new as HTML
   Rendered issues/_form.html.erb (2.9ms)
   Rendered issues/new.html.erb within layouts/application (5.9ms)
 Completed 200 OK in 50ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:34:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.4ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (6.4ms)
+  Rendered page/welcome.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 117ms (Views: 94.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.4ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (0.8ms)
+  Rendered page/welcome.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:34:42 -0400
+
+
+Started GET "/issues/new" for 127.0.0.1 at 2015-06-21 13:34:55 -0400
+Processing by IssuesController#new as HTML
+  Rendered issues/_form.html.erb (11.8ms)
+  Rendered issues/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/issues" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+Processing by IssuesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PO0qPyUn1+T6tbSJUzAaUKFV5ipgb3yKcj6OnGIlvHM=", "issue"=>{"title"=>"aaa", "content"=>"bbbb"}, "commit"=>"Create Issue"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `issues` (`content`, `created_at`, `title`, `updated_at`) VALUES ('bbbb', '2015-06-21 17:35:01', 'aaa', '2015-06-21 17:35:01')[0m
+  [1m[35m (95.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 100ms (ActiveRecord: 96.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.6ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.1ms)
+  Rendered page/welcome.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 51ms (Views: 48.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:35:01 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:42:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.2ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (6.3ms)
+  Rendered page/welcome.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 174ms (Views: 154.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:42:54 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.1ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.3ms)
+  Rendered page/welcome.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 90ms (Views: 88.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:43:44 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:43:45 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.3ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (1.9ms)
+  Rendered page/welcome.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:45 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:43:46 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:44:33 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.6ms)
+  Rendered page/welcome.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:44:34 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.2ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (1.1ms)
+  Rendered page/welcome.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:44:35 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.3ms)
+  Rendered page/welcome.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 96ms (Views: 94.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:46:04 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.3ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (1.0ms)
+  Rendered page/welcome.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:46:05 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (2.6ms)
+  Rendered page/welcome.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:46:14 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.3ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (1.3ms)
+  Rendered page/welcome.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (0.9ms)
+  Rendered page/welcome.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:15 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.2ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (1.1ms)
+  Rendered page/welcome.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:46:16 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.0ms)
+  Rendered page/welcome.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:47:32 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.3ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (0.9ms)
+  Rendered page/welcome.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 92ms (Views: 89.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:48:22 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.9ms)
+  Rendered page/welcome.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:49:19 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.2ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (1.0ms)
+  Rendered page/welcome.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:49:20 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (0.9ms)
+  Rendered page/welcome.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 54ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:49:21 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.3ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (7.8ms)
+  Rendered page/welcome.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 126ms (Views: 102.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:36 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:49:37 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.9ms)
+  Rendered page/welcome.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:49:40 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:54:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.3ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (6.2ms)
+  Rendered page/welcome.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 783ms (Views: 762.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff2" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:54:17 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.4ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (2.4ms)
+  Rendered page/welcome.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:54:48 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.2ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (1.0ms)
+  Rendered page/welcome.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:54:56 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.1ms)
+  Rendered page/welcome.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:54:57 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+Processing by PageController#welcome as HTML
+  [1m[35mIssue Load (0.3ms)[0m  SELECT `issues`.* FROM `issues`
+  Rendered page/_issue_list.html.erb (1.2ms)
+  Rendered page/welcome.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:54:58 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.5ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  Rendered page/_issue_list.html.erb (1.2ms)
+  Rendered page/welcome.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:54:59 -0400

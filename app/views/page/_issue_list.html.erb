@@ -13,10 +13,12 @@
        			 <a class="read-more" href="#">read</a>
         		<span class="meta-data">
          		 <a href="/happypeter">happypeter</a>
+             <%= time_ago_in_words(i.created_at) %> ago
        			 </span>
      		 </div>
       		<div class="issue-comment-count">
-            <%= link_to i[:comments],"5"	%>
+            <i class="fa fa-comments icon-muted"></i>
+            <%= link_to "5","#"	%>
      		</div>
     	</article>
     <% end %>

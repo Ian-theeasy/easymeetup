@@ -35,7 +35,6 @@
     }
   }
 }
-
 .home-banner-links {
   position: absolute;
   right: 160px;
@@ -68,7 +67,6 @@
     font-weight: normal;
   }
 }
-
 .issue-list {
   background: #fff;
   clear: both;
@@ -118,6 +116,13 @@
       margin-top: 15px;
       a {
         font-size: 45px;
+      }
+
+      .icon-muted {
+        font-size: 25px;
+        position: relative;
+        top: -20px;
+        color: #c9c9c9;
       }
     }
     .avatar {
