@@ -4110,3 +4110,358 @@ Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 1.8ms)
 
 
 Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 15:05:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20150621212048)
+  [1m[35m (264.5ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150621212048')
+  [1m[36m (38.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20150621212953)
+  [1m[35m (0.6ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 17:39:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.2) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.2) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.2) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20150621212953)
+  [1m[35m (0.7ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20150621212953)
+  [1m[35m (181.1ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `password_digest` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150621212953')
+  [1m[36m (48.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 17:40:03 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered page/_issue_list.html.erb (11.9ms)
+  Rendered page/welcome.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 28ms
+
+SyntaxError (/home/ian/MyProjects/RailsProjects/easymeetup/app/views/layouts/application.html.erb:23: syntax error, unexpected '<'
+...link_to "signup", signup_path></li>
+...                               ^
+/home/ian/MyProjects/RailsProjects/easymeetup/app/views/layouts/application.html.erb:24: unknown regexp option - l
+/home/ian/MyProjects/RailsProjects/easymeetup/app/views/layouts/application.html.erb:25: syntax error, unexpected '<'
+  </div>
+   ^
+/home/ian/MyProjects/RailsProjects/easymeetup/app/views/layouts/application.html.erb:26: unknown regexp options - dv
+/home/ian/MyProjects/RailsProjects/easymeetup/app/views/layouts/application.html.erb:28: syntax error, unexpected '<'
+<%= yield );@output_buffer.safe_append='
+ ^
+/home/ian/MyProjects/RailsProjects/easymeetup/app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ian/MyProjects/RailsProjects/easymeetup/app/views/layouts/application.html.erb:41: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:23: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:24: unknown regexp option - l
+  app/views/layouts/application.html.erb:25: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:26: unknown regexp options - dv
+  app/views/layouts/application.html.erb:28: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:39: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/layouts/application.html.erb:41: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 17:41:50 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered page/_issue_list.html.erb (5.9ms)
+  Rendered page/welcome.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 361ms (Views: 358.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/sections/users.css?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 17:41:51 -0400
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-06-21 17:41:53 -0400
+Processing by UsersController#signup as HTML
+Completed 500 Internal Server Error in 3ms
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `signup'
+
+
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-06-21 17:41:53 -0400
+Processing by UsersController#signup as HTML
+Completed 500 Internal Server Error in 4ms
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `signup'
+
+
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-06-21 17:43:30 -0400
+Processing by UsersController#signup as HTML
+Completed 500 Internal Server Error in 4ms
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:3:in `signup'
+
+
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by UsersController#signup as HTML
+  Rendered users/signup.html.erb within layouts/application (42.9ms)
+Completed 200 OK in 157ms (Views: 140.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/sections/users.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:01 -0400
+
+
+Started GET "/signup" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+Processing by UsersController#signup as HTML
+  Rendered users/signup.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 57ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/sections/users.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:24 -0400
+
+
+Started POST "/users" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PO0qPyUn1+T6tbSJUzAaUKFV5ipgb3yKcj6OnGIlvHM=", "user"=>{"name"=>"aa", "email"=>"aa@aa.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Signup"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `name`, `password_digest`, `updated_at`) VALUES ('2015-06-21 21:45:38', 'aa@aa.com', 'aa', '$2a$10$bpRUiXqlDRwsXXHsVksiSeOBmYnlxYDmpczEnfXxPGJgHsk1pSaGe', '2015-06-21 21:45:38')[0m
+  [1m[35m (136.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 243ms (ActiveRecord: 136.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 3[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered page/_issue_list.html.erb (24.4ms)
+  Rendered page/welcome.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 98ms (Views: 82.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/sections/users.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 17:45:38 -0400
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  `users`.* FROM `users`  WHERE `users`.`id` = 1 LIMIT 1[0m
