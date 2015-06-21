@@ -3748,3 +3748,365 @@ Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 13:54:5
 
 
 Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 13:54:59 -0400
+  [1m[36mIssue Load (0.5ms)[0m  [1mSELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1[0m
+Mysql2::Error: Table 'easymeetup_development.comments' doesn't exist: SHOW FULL FIELDS FROM `comments`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateComments (20150621183252)
+  [1m[35m (67.4ms)[0m  CREATE TABLE `comments` (`id` int(11) auto_increment PRIMARY KEY, `content` text, `username` varchar(255), `email` varchar(255), `issue_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150621183252')
+  [1m[36m (38.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `comments` (`content`, `created_at`, `email`, `issue_id`, `updated_at`, `username`) VALUES ('Hello peter here', '2015-06-21 18:54:13', 'happypeter1983@gmail.com', 2, '2015-06-21 18:54:13', 'happypeter')
+  [1m[36m (41.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mIssue Load (0.2ms)[0m  SELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT `comments`.* FROM `comments`  WHERE `comments`.`issue_id` = 2[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 5
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 3[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered page/_issue_list.html.erb (24.3ms)
+  Rendered page/welcome.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 88ms (Views: 71.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 14:55:00 -0400
+
+
+Started GET "/issues/2" for 127.0.0.1 at 2015-06-21 14:55:05 -0400
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIssue Load (0.4ms)[0m  [1mSELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT `comments`.* FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered shared/_comment_list.html.erb (20.7ms)
+  Rendered shared/_comment_box.html.erb (3.9ms)
+  Rendered issues/show.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 84ms (Views: 79.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/images/default_avatar.png" for 127.0.0.1 at 2015-06-21 14:55:05 -0400
+
+ActionController::RoutingError (No route matches [GET] "/images/default_avatar.png"):
+  actionpack (4.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.2) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.2) lib/rails/engine.rb:514:in `call'
+  railties (4.1.2) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /home/ian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/ian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/ian/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.6ms)
+  Rendered /home/ian/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.1.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/assets/male.png" for 127.0.0.1 at 2015-06-21 14:55:05 -0400
+
+
+Started GET "/issues/2" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT `comments`.* FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered shared/_comment_list.html.erb (2.5ms)
+  Rendered shared/_comment_box.html.erb (1.8ms)
+  Rendered issues/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started GET "/assets/male.png" for 127.0.0.1 at 2015-06-21 14:55:27 -0400
+
+
+Started POST "/issues/2/comments" for 127.0.0.1 at 2015-06-21 14:56:04 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PO0qPyUn1+T6tbSJUzAaUKFV5ipgb3yKcj6OnGIlvHM=", "username"=>"aa", "email"=>"aa@aa.com", "content"=>"hi aaa", "commit"=>"submit comment", "issue_id"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `comments` (`content`, `created_at`, `email`, `issue_id`, `updated_at`, `username`) VALUES ('hi aaa', '2015-06-21 18:56:04', 'aa@aa.com', 2, '2015-06-21 18:56:04', 'aa')
+  [1m[36m (95.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mIssue Load (0.5ms)[0m  SELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1
+Redirected to http://localhost:3000/issues/2
+Completed 302 Found in 105ms (ActiveRecord: 97.0ms)
+
+
+Started GET "/issues/2" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT `comments`.* FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered shared/_comment_list.html.erb (2.4ms)
+  Rendered shared/_comment_box.html.erb (0.7ms)
+  Rendered issues/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/assets/male.png" for 127.0.0.1 at 2015-06-21 14:56:05 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 14:57:59 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 5
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 3[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered page/_issue_list.html.erb (7.4ms)
+  Rendered page/welcome.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 14:58:00 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 15:01:08 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered page/_issue_list.html.erb (10.7ms)
+  Rendered page/welcome.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 73ms (Views: 61.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 15:01:09 -0400
+
+
+Started GET "/issues/2" for 127.0.0.1 at 2015-06-21 15:01:11 -0400
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT `comments`.* FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered shared/_comment_list.html.erb (8.0ms)
+  Rendered shared/_comment_box.html.erb (0.8ms)
+  Rendered issues/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/male.png" for 127.0.0.1 at 2015-06-21 15:01:11 -0400
+
+
+Started POST "/issues/2/comments" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PO0qPyUn1+T6tbSJUzAaUKFV5ipgb3yKcj6OnGIlvHM=", "username"=>"ian", "email"=>"ianyh@outlook.com", "content"=>"asdasd", "commit"=>"submit comment", "issue_id"=>"2"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `comments` (`content`, `created_at`, `email`, `issue_id`, `updated_at`, `username`) VALUES ('asdasd', '2015-06-21 19:01:36', 'ianyh@outlook.com', 2, '2015-06-21 19:01:36', 'ian')
+  [1m[36m (99.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mIssue Load (0.2ms)[0m  SELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1
+Redirected to http://localhost:3000/issues/2
+Completed 302 Found in 106ms (ActiveRecord: 100.0ms)
+
+
+Started GET "/issues/2" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+Processing by IssuesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mIssue Load (0.2ms)[0m  [1mSELECT  `issues`.* FROM `issues`  WHERE `issues`.`id` = 2 LIMIT 1[0m
+  [1m[35mComment Load (0.5ms)[0m  SELECT `comments`.* FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered shared/_comment_list.html.erb (3.6ms)
+  Rendered shared/_comment_box.html.erb (1.0ms)
+  Rendered issues/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/sections/issue_new.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/sections/issue_show.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/vendor/jquery.anystretch.min.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/sections/layout.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/sections/welcome.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/shared/common.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/assets/male.png" for 127.0.0.1 at 2015-06-21 15:01:36 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2015-06-21 15:05:05 -0400
+Processing by PageController#welcome as HTML
+  [1m[36mIssue Load (0.3ms)[0m  [1mSELECT `issues`.* FROM `issues`[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 5
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 3[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `comments`  WHERE `comments`.`issue_id` = 2
+  Rendered page/_issue_list.html.erb (6.5ms)
+  Rendered page/welcome.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/home-banner-bg.jpg" for 127.0.0.1 at 2015-06-21 15:05:05 -0400

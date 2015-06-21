@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   #issues
 
   resources :issues
+
+  # comments
+  post '/issues/:issue_id/comments' => "comments#create"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,6 +1,7 @@
 class IssuesController < ApplicationController
   def show
   	@issue=Issue.find(params[:id])
+    @comments = @issue.comments
   end
 
 	def destroy
