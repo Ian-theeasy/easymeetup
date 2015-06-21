@@ -1,14 +1,15 @@
 <div class="issue-heading">
   <div class="container">
-    <%= @issue.title %>
-    <%= link_to 'Destroy', issue_path(@issue), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+      <%= @issue.title %>
+      <%= link_to 'Delete', issue_path(@issue), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+      <%= link_to 'Edit', edit_issue_path(@issue), class: "btn btn-primary" %>
   </div>
 </div>
 <div class="container">
   <div class="replies">
     <article class="reply clearfix">
       <div class="avatar">
-        <img src="http://gravatar.com/avatar/a92785d8d68f1d1d83b008574f8b5dba.png?s=512&amp;d=retr" alt="" class="image-circle">
+        <img src="http://images.clipartpanda.com/head-clipart-fair-red-head-man-md.png?s=512&amp;d=retr" alt="" class="image-circle">
       </div>
       <div class="body">
         <div class="heading">

@@ -9,8 +9,14 @@ Rails.application.routes.draw do
   get '/about' =>'page#about'
 
   #issues
+
+  get '/issues/new' => "issues#new"
+  get 'issues' => "issues#index", :as => "issues"
   get '/issues/:id' => "issues#show", :as => "issue"
   delete 'issues/:id' => 'issues#destroy'
+  get 'issues/:id/edit' => 'issues#edit', :as => 'edit_issue'
+  post '/issues' => 'issues#create'
+  patch 'issues/:id' => 'issues#update'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
