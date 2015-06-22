@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 #use icons in font awesome
 gem 'font-awesome-sass'
+#use atwho
+gem 'jquery-atwho-rails'
 #Use secure password
 gem 'bcrypt', '~> 3.1.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

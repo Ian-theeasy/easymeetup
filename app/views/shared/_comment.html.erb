@@ -1,0 +1,16 @@
+<div class="reply clearfix">
+   <div class="avatar">
+     <%= link_to '#' do %>
+       <img src=<%= current_user.avatar %> alt="" class="image-circle">
+     <% end %>
+   </div>
+   <div class="body">
+     <div class="heading">
+        <h5 class="name"><%= link_to c.user.name, "#" %></h5>
+        <span class="datetime">
+          <%= time_ago_in_words c.created_at %> ago
+        </span>
+     </div>
+     <%= c.content %>
+   </div>
+</div>

@@ -6,6 +6,7 @@
 	<%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body class="<%= params[:controller] + '-' + params[:action] %>">
 
@@ -29,7 +30,9 @@
     </ul>
   </div>
 </div>
-
+<% if flash.notice %>
+  <div class="notice"><%= flash.notice %></div>
+<% end %>
 <%= yield %>
 
 <div class="footer">
@@ -37,6 +40,13 @@
     footer
   </div>
 </div>
+
+<script>
+  var hideNotice = function(){
+    $(".notice").fadeOut("slow");
+  }
+  setTimeout(hideNotice, 4000);
+</script>
 
 </body>
 </html>

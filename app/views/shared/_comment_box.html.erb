@@ -1,17 +1,32 @@
 <article class="reply clearfix">
   <div class="avatar">
     <%= link_to "#" do %>
-      <%= image_tag "male.png", class: "image-circle" %>
+      <img src=<%= current_user.avatar %> alt="" class="image-circle">
     <% end %>
   </div>
   <div class="body">
-  <%= form_tag("/issues/#{issue.id}/comments", method: :post) do  %>
-    <%= label_tag :username, "Username" %>
-    <%= text_field_tag(:username) %>
-    <%= label_tag :email, "email" %>
-    <%= text_field_tag(:email) %>
-    <%= text_area_tag(:content) %>
-    <%= submit_tag 'submit comment', class: 'btn btn-primary btn-submit' %>
+  <%= form_for(Comment.new(:issue_id => issue.id, :user_id => current_user.id), remote: true) do |f| %>
+    <%= f.hidden_field :issue_id %>
+    <%= f.hidden_field :user_id  %>
+    <%= f.text_area :content %>
+    <%= submit_tag 'Submit comment', class: 'btn btn-primary btn-submit' %>
   <% end %>
   </div>
 </article>
+<script>
+  var commenter_exist = [];
+  $('.reply .name a').each(function() {
+    if($.inArray($(this).text(), commenter_exist) < 0) {
+      commenter_exist.push($(this).text());
+    }
+  });
+  $('textarea').atwho({ at: "@", 'data': commenter_exist });
+</script>
+
+<script>
+  $(".reply textarea#comment_content").keydown(function(e) {
+    if ((e.ctrlKey||e.metaKey) && e.keyCode == 13) {
+      $(".reply input[type=submit]").click();
+    }
+  });
+</script>

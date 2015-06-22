@@ -24,8 +24,10 @@ class UsersController < ApplicationController
       else
         cookies[:auth_token] = user.auth_token
       end
+      flash.notice = "Login successful!"
       redirect_to :root
     else
+      flash.notice = "Wrong username or password!"
       redirect_to :login
     end
   end
