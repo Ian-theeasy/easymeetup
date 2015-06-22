@@ -3,10 +3,14 @@ class UsersController < ApplicationController
   	@user=User.new
   end
   def create
-  	user=User.new(user_params)
-  	user.save
-    cookies[:auth_token] = user.auth_token
-  	redirect_to :root
+  	@user=User.new(user_params)
+    if @user.save
+      cookies[:auth_token] = @user.auth_token
+      redirect_to :root
+    else
+      render :signup
+    end
+
   end
 
   def login
