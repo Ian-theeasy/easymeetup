@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'page#welcome'
   get '/about' =>'page#about'
-  get "signup" =>"users#signup", :as => "signup"
 
   #issues
 
@@ -20,6 +19,13 @@ Rails.application.routes.draw do
   #users
   resources :users, only: [:create]
 
+  # sign up
+  get "signup" =>"users#signup", :as => "signup"
+  # login
+  get "login" =>"users#login", :as => "login"
+  post "create_login_session" => "users#create_login_session"
+  # logout
+  delete "logout" => "users#logout", :as => "logout"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
