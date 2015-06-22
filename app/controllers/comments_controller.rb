@@ -6,6 +6,14 @@ class CommentsController < ApplicationController
 			format.js
 		end
 	end
+
+	def destroy
+  	comment = Comment.find(params[:id])
+  	@issue=comment.issue
+  	comment.destroy
+  	redirect_to issue_path(@issue)
+	end
+
 	private
   def comment_params
     params.require(:comment).permit(:issue_id, :user_id, :content)

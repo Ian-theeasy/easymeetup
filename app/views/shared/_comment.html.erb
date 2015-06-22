@@ -1,16 +1,21 @@
 <div class="reply clearfix">
-   <div class="avatar">
-     <%= link_to '#' do %>
-       <img src=<%= current_user.avatar %> alt="" class="image-circle">
-     <% end %>
-   </div>
-   <div class="body">
-     <div class="heading">
-        <h5 class="name"><%= link_to c.user.name, "#" %></h5>
-        <span class="datetime">
-          <%= time_ago_in_words c.created_at %> ago
-        </span>
-     </div>
-     <%= c.content %>
-   </div>
+  <div class="avatar">
+    <%= link_to '#' do %>
+      <img src=<%= current_user.avatar %> alt="" class="image-circle">
+    <% end %>
+  </div>
+  <div class="body">
+    <div class="heading">
+      <h5 class="name"><%= link_to c.user.name, "#" %></h5>
+      <span class="datetime">
+        <%= time_ago_in_words c.created_at %> ago
+      </span>
+    </div>
+    <%= c.content %>
+    <div>
+    <% if current_user && (current_user == c.user ||current_user == c.issue.user) %>
+      <%= link_to 'Delete', comment_path(c), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+    <% end %>
+    </div>
+  </div>
 </div>

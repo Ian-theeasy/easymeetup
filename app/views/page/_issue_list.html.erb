@@ -1,25 +1,25 @@
 <div class="issue-list">
 	<% issues.each do |i| %>
-    	<article class="issue clearfix">
-      		<div class="avatar">
-       	 		<a href="/happypeter">
-          			<img src=http://images.clipartpanda.com/head-clipart-fair-red-head-man-md.png?s=512&amp;d=retro alt="">
-				</a>
-			</div>
-     		 <div class="body">
-        		<h5 class="title">
-         		 <%= link_to i.title, issue_path(i) %>
-        		</h5>
-       			 <a class="read-more" href="#">read</a>
-        		<span class="meta-data">
-         		 <a href="/happypeter">happypeter</a>
-             <%= time_ago_in_words(i.created_at) %> ago
-       			 </span>
-     		 </div>
-      		<div class="issue-comment-count">
-            <i class="fa fa-comments icon-muted"></i>
-            <%= link_to i.comments.count, i	%>
-     		</div>
-    	</article>
-    <% end %>
-  </div>
+    <article class="issue clearfix">
+      <div class="avatar">
+   	 		<%= link_to "#" do %>
+          <%= image_tag i.user.avatar %>
+        <% end %>
+      </div>
+     	<div class="body">
+        <h5 class="title">
+         	<%= link_to i.title, issue_path(i) %>
+        </h5>
+       	<a class="read-more" href="#">read</a>
+        <span class="meta-data">
+         	<%= link_to i.user.name, '#' %>
+          <%= time_ago_in_words(i.created_at) %> ago
+       	</span>
+     	</div>
+      <div class="issue-comment-count">
+        <i class="fa fa-comments icon-muted"></i>
+        <%= link_to i.comments.count, i	%>
+     	</div>
+    </article>
+  <% end %>
+</div>
