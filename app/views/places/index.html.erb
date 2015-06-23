@@ -1,0 +1,24 @@
+<div class="issue-heading">
+  <div class="container">
+      All Places
+      <% if current_user %>
+        <%= link_to 'Create a New Place', new_place_path(), class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>
+<div class="issue-list">
+  <% @places.each do |i| %>
+    <article class="issue clearfix">
+      <div class="avatar">
+        <i class="fa fa-building"></i>
+      </div>
+      <div class="body">
+        <h5 class="title">
+          <%= link_to i.name, place_path(i) %>
+        </h5>
+        <a class="read-more" href="#">read</a>
+      </div>
+
+    </article>
+  <% end %>
+</div>

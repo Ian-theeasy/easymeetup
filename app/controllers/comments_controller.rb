@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
   	comment = Comment.find(params[:id])
   	@issue=comment.issue
   	comment.destroy
-  	redirect_to issue_path(@issue)
+  	issue_path(@issue)
 	end
 
 	private

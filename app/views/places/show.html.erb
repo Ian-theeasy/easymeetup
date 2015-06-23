@@ -1,0 +1,24 @@
+<div class="issue-heading">
+  <div class="container">
+      <%= @place.name %>
+      <% if current_user %>
+        <%= link_to 'Delete', place_path(@place), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+        <%= link_to 'Edit', edit_place_path(@place), class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>
+<div class="container">
+    <article class="issue clearfix">
+    <div class="avatar">
+      <%= link_to '#' do %>
+        <%= image_tag("house.jpg", class: "image-circle") %>
+      <% end %>
+    </div>
+      <div class="body">
+        <div class="heading">
+          <h5 class="name"><%= link_to @place.owner, '#' %></h5>
+        </div>
+        <%= @place.description %>
+      </div>
+    </article>
+</div>

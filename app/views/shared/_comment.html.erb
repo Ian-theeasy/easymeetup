@@ -1,7 +1,11 @@
 <div class="reply clearfix">
   <div class="avatar">
     <%= link_to '#' do %>
-      <img src=<%= current_user.avatar %> alt="" class="image-circle">
+      <% if current_user %>
+        <img src=<%= current_user.avatar %> alt="" class="image-circle">
+      <% else %>
+        <%= image_tag("male.png", class: "image-circle") %>
+      <% end %>
     <% end %>
   </div>
   <div class="body">
