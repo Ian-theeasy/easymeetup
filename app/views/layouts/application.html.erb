@@ -6,20 +6,30 @@
 	<%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
+  <style>
+    img.bg {
+      min-height: 100%;
+      min-width: 1024px;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+  </style>
 </head>
-<body class="<%= params[:controller] + '-' + params[:action] %>">
-
-<div class="navbar clearfix">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      EasyMeetUp
-    </a>
-    <ul class="nav left">
+<body style="padding:0px 50px;">
+<%= image_tag("home-banner-bg.jpg", class: "bg") %>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="navbar-header">
+    <%= link_to "EasyMeetup", root_path, class: "navbar-brand" %>
+  </div>
+  <div>
+    <ul class="nav navbar-nav">
       <li><a href="/about">About</a></li>
       <li><%= link_to "Places",places_path %></a></li>
     </ul>
-    <ul class="nav right">
+    <ul class="nav navbar-nav navbar-right" style="padding:0px 30px;">
       <% if current_user %>
         <li><%= link_to current_user.name, "#" %></li>
         <li><%= link_to "logout", logout_path, method: "delete" %></li>
@@ -29,7 +39,7 @@
       <% end %>
     </ul>
   </div>
-</div>
+</nav>
 <% if flash.notice %>
   <div class="notice"><%= flash.notice %></div>
 <% end %>
@@ -37,7 +47,7 @@
 
 <div class="footer">
   <div class="container">
-    footer
+    By Ian.yh
   </div>
 </div>
 
@@ -47,6 +57,5 @@
   }
   setTimeout(hideNotice, 4000);
 </script>
-
 </body>
 </html>

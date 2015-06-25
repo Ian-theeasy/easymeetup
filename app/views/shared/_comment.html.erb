@@ -1,25 +1,19 @@
-<div class="reply clearfix">
-  <div class="avatar">
+<div class="row reply" style="padding:0px 0px 20px">
+  <div class="col-md-1">
     <%= link_to '#' do %>
-      <% if current_user %>
-        <img src=<%= current_user.avatar %> alt="" class="image-circle">
-      <% else %>
-        <%= image_tag("male.png", class: "image-circle") %>
-      <% end %>
+        <%= image_tag("male.png", class: "img-responsive") %>
     <% end %>
   </div>
-  <div class="body">
-    <div class="heading">
-      <h5 class="name"><%= link_to c.user.name, "#" %></h5>
-      <span class="datetime">
+  <div class="col-md-2">
+      <h5><%= link_to c.user.name, "#" %></h5>
         <%= time_ago_in_words c.created_at %> ago
-      </span>
-    </div>
+  </div>
+  <div class="col-md-8">
     <%= c.content %>
-    <div>
+  </div>
+  <div class="col-md-1">
     <% if current_user && (current_user == c.user ||current_user == c.issue.user) %>
-      <%= link_to 'Delete', comment_path(c), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+      <%= link_to 'Delete', comment_path(c), method: :delete, remote: true, data: { confirm: 'Are you sure?' }, class: "btn btn-primary delete_comment" %>
     <% end %>
-    </div>
   </div>
 </div>

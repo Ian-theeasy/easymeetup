@@ -1,25 +1,39 @@
-<div class="issue-list">
+<!--
+<div class="row">
 	<% issues.each do |i| %>
-    <article class="issue clearfix">
-      <div class="avatar">
+      <div class="col-md-1" style="height:200px;">
    	 		<%= link_to "#" do %>
-          <%= image_tag i.user.avatar %>
+          <%= image_tag("EventsCalendar_Icon.png", class:"img-responsive") %>
         <% end %>
       </div>
-     	<div class="body">
-        <h5 class="title">
+     	<div class="col-md-9" style="height:200px;">
+        <h5>
          	<%= link_to i.title, issue_path(i) %>
         </h5>
-       	<a class="read-more" href="#">read</a>
-        <span class="meta-data">
+       	<a href="#">read</a>
+        <span>
          	<%= link_to i.user.name, '#' %>
           <%= time_ago_in_words(i.created_at) %> ago
        	</span>
      	</div>
-      <div class="issue-comment-count">
-        <i class="fa fa-comments icon-muted"></i>
+      <div class="col-md-2" style="height:200px;">
+        <i class="fa fa-comments"></i>
         <%= link_to i.comments.count, i	%>
      	</div>
-    </article>
   <% end %>
 </div>
+-->
+<% issues.each do |i| %>
+  <div class="col-md-4 portfolio-item">
+    <a href="#">
+      <%= image_tag("EventsCalendar_Icon.png", class:"img-responsive") %>
+    </a>
+    <h3>
+      <%= link_to i.title, issue_path(i) %>
+    </h3>
+    <p>
+      <%= link_to i.user.name, '#' %>
+      <%= time_ago_in_words(i.created_at) %> ago
+    </p>
+  </div>
+<% end %>

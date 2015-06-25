@@ -1,5 +1,6 @@
-<div class="new-issue-form-container clearfix">
-  <div class="new-issue-form clearfix">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" style="text-align:center">
     <%= form_for issue do |f| %>
       <dl class="form">
         <dt><%= f.label :title %></dt>
@@ -11,5 +12,6 @@
       </dl>
       <p><%= f.submit :class => "submit-issue-button btn btn-primary" %></p>
     <% end %>
+    </div>
   </div>
 </div>

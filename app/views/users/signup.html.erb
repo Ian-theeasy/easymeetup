@@ -1,29 +1,30 @@
-<div class="signup-form-container clearfix">
-  <div class="signup-form">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12" style="text-align:center">
     <%= form_for @user do |f| %>
 
-        <dl class="form">
+        <div class="form-group">
           <dt><%= f.label :name, "Username" %></dt>
           <dd><%= f.text_field :name %></dd>
           <% if @user.errors[:name].any? %>
-            <dd class="error"><%= @user.errors[:name][0] %></dd>
+            <dd ><%= @user.errors[:name][0] %></dd>
           <% end %>
-        </dl>
-        <dl class="form">
+        </div>
+        <dl class="form-group">
           <dt><%= f.label :email %></dt>
           <dd><%= f.text_field :email %></dd>
           <% if @user.errors[:email].any? %>
             <dd class="error"><%= @user.errors[:email][0] %></dd>
           <% end %>
         </dl>
-        <dl class="form">
+        <dl class="form-group">
           <dt><%= f.label :password, "Password" %></dt>
           <dd><%= f.password_field :password %></dd>
           <% if @user.errors[:password].any? %>
             <dd class="error"><%= @user.errors[:password][0] %></dd>
           <% end %>
         </dl>
-        <dl class="form">
+        <dl class="form-group">
           <dt><%= f.label :password_confirmation, "password again" %></dt>
           <dd><%= f.password_field :password_confirmation %></dd>
           <% if @user.errors[:password_confirmation].any? %>
@@ -32,5 +33,6 @@
         </dl>
         <p><%= f.submit "Signup", :class => "signup-button btn btn-primary" %></p>
     <% end %>
-  </div>
+</div>
+</div>
 </div>

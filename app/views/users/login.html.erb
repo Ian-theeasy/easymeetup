@@ -1,7 +1,8 @@
-<div class="login-form-container clearfix">
-  <div class="login-form">
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-md-12" style="text-align:center">
     <%= form_tag "/create_login_session" do %>
-      <dl class="form">
+      <dl class="form-group">
         <dt>
           <%= label_tag "Username" %>
         </dt>
@@ -9,7 +10,7 @@
           <%= text_field_tag :name, params[:name] %>
         </dd>
       </dl>
-      <dl class="form">
+      <dl class="form-group">
         <dt>
           <%= label_tag "Password" %>
         </dt>
@@ -17,14 +18,15 @@
           <%= password_field_tag :password, params[:password] %>
         </dd>
       </dl>
-      <dl class="form remember-me">
+      <dl>
         <%= check_box_tag :remember_me, 1, params[:remember_me] %>
         <%= label_tag :remember_me %>
       </dl>
-      <p> <%= submit_tag "Login", :class => "login-button btn btn-primary" %> </p>
-      <div class="need-signup">
+      <p> <%= submit_tag "Login", :class => "btn btn-primary" %> </p>
+      <div>
         <%= link_to "New Account", signup_path %>
       </div>
     <% end %>
+  </div>
   </div>
 </div>

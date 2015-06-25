@@ -1,32 +1,48 @@
-<div class="issue-heading">
-  <div class="container">
-      <%= @issue.title %>
+<div class="container-fluid">
+  <div class="row" style="padding:0px 0px 20px">
+    <div class="col-md-2 " >
+      <h2><%= @issue.title %></h2>
+      </div>
+      <div class="col-md-2 " >
+      <h2>
       <% if current_user && current_user == @issue.user %>
         <%= link_to 'Delete', issue_path(@issue), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
         <%= link_to 'Edit', edit_issue_path(@issue), class: "btn btn-primary" %>
       <% end %>
+      </h2>
+    </div>
   </div>
 </div>
-<div class="container">
-  <div class="replies">
-    <article class="reply clearfix">
-      <div class="avatar">
-        <%= image_tag @issue.user.avatar, class: "image-circle" %>
+
+<div class="container-fluid" >
+  <div class="row">
+      <div class="col-md-1 " >
+        <%= image_tag("male.png", class:"img-responsive") %>
       </div>
-      <div class="body">
-        <div class="heading">
-          <h5 class="name"><%= link_to @issue.user.name, '#' %></h5>
-        </div>
+      <div class="col-md-11" >
+        <h5><%= link_to @issue.user.name, '#' %></h5>
         <%= @issue.content %>
       </div>
-    </article>
+  </div>
+  <div class="row ">
+    <div class="col-md-12" >
+      <h3>Comments:</h3>
+    </div>
+  </div>
+  <div class="row ">
+  <div class="col-md-12 replies" >
     <% @comments.each do |c| %>
       <%= render partial: 'shared/comment', locals: {c: c} %>
     <% end %>
   </div>
-  <% if current_user %>
-    <%= render partial: 'shared/comment_box', locals: {issue: @issue} %>
-  <% else %>
-    <%= link_to "please login to make a comment", login_path %>
-  <% end %>
+</div>
+</div>
+<div class="row ">
+  <div class="col-md-12">
+    <% if current_user %>
+      <%= render partial: 'shared/comment_box', locals: {issue: @issue} %>
+    <% else %>
+      <%= link_to "please login to make a comment", login_path %>
+    <% end %>
+  </div>
 </div>

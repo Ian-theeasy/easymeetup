@@ -1,22 +1,16 @@
-<div class="home-banner" data-stretch="<%= image_url "home-banner-bg.jpg" %>">
-	<div class="banner-inner container clearfix">
+<div class="row">
+	<div class="col-md-9">
 	  <h1>It's Party Time!</h1>
-	  <p class="subheading">Let's meet! It's easy!</p>
-	  <div class="home-banner-links">
-	    <%= link_to "New Meet!", "/issues/new", class: "banner-btn btn" %>
-	  </div>
+	  <h2>Let's meet! It's easy!</h2>
 	</div>
+	  <div class="col-md-3">
+	    <%= link_to "New Meet!", new_issue_path(), class: "btn btn-default" %>
+	  </div>
 </div>
-<div class="issue-list-header">
-  <div class="container clearfix">
-    <h1 class="issue-list-heading">all meeting</h1>
-  </div>
+<div class="row">
+	<div class="col-md-9">
+    <h1 >all meeting</h1>
+       <%= render partial: 'issue_list', locals: { issues: @issues } %>
+   </div>
 </div>
 
-<div class="container clearfix">
-   <%= render partial: 'issue_list', locals: { issues: @issues } %>
-</div>
-
-<script>
-  $('.home-banner').anystretch();
-</script>

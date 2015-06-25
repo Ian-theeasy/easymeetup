@@ -11,7 +11,9 @@ class CommentsController < ApplicationController
   	comment = Comment.find(params[:id])
   	@issue=comment.issue
   	comment.destroy
-  	issue_path(@issue)
+  	respond_to do |format|
+			format.js { render :layout => false }
+		end
 	end
 
 	private

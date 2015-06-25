@@ -1,27 +1,29 @@
-<div class="new-issue-form-container clearfix">
-  <div class="new-issue-form clearfix">
+<div class="container">
+  <div class="row">
+  <div class="col-md-12" style="text-align:center;">
     <%= form_for @place do |f| %>
-      <dl class="form">
+      <dl class="form-group">
         <dt><%= f.label :name %></dt>
         <dd><%= f.text_field :name %></dd>
       </dl>
-      <dl class="form">
+      <dl class="form-group">
         <dt><%= f.label :owner %></dt>
         <dd><%= f.text_field :owner %></dd>
       </dl>
-      <dl class="form">
+      <dl class="form-group">
         <dt><%= f.label :address %></dt>
         <dd><%= f.text_field :address %></dd>
       </dl>
-      <dl class="form">
+      <dl class="form-group">
         <dt><%= f.label :capacity %></dt>
         <dd><%= f.number_field :capacity %></dd>
       </dl>
-      <dl class="form">
+      <dl class="form-group">
         <dt><%= f.label :description %></dt>
         <dd><%= f.text_area :description %></dd>
       </dl>
-      <p><%= f.submit :class => "submit-place-button btn btn-primary" %></p>
+      <p><%= f.submit :class => "btn btn-primary" %></p>
     <% end %>
+    </div>
   </div>
 </div>

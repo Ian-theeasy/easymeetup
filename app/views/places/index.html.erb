@@ -1,24 +1,36 @@
-<div class="issue-heading">
-  <div class="container">
-      All Places
-      <% if current_user %>
-        <%= link_to 'Create a New Place', new_place_path(), class: "btn btn-primary" %>
-      <% end %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+        <h2>All Places</h2>
+    </div>
+    <div class="col-md-10">
+      <h2>
+        <% if current_user %>
+          <%= link_to 'Create a New Place', new_place_path(), class: "btn btn-primary" %>
+        <% end %>
+      </h2>
+    </div>
   </div>
-</div>
-<div class="issue-list">
-  <% @places.each do |i| %>
-    <article class="issue clearfix">
-      <div class="avatar">
-        <i class="fa fa-building"></i>
-      </div>
-      <div class="body">
-        <h5 class="title">
-          <%= link_to i.name, place_path(i) %>
-        </h5>
-        <a class="read-more" href="#">read</a>
-      </div>
 
-    </article>
-  <% end %>
+  <% @places.each do |i| %>
+    <div class="row" style="padding:0px 0px 20px">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-2">
+            <i class="fa fa-building" style="font-size:50px;"></i>
+          </div>
+          <div class="col-md-2">
+          <h5>
+            <%= link_to i.name, place_path(i) %>
+          </h5>
+          </div>
+          <div class="col-md-8">
+            <p>
+              description
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
 </div>
